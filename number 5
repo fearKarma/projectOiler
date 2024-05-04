@@ -1,0 +1,18 @@
+#Problem 5
+#Min positive number that is evenly divisible by all of the numbers from 1-20
+
+def minPos(n):
+    st = n
+    ok = True
+    for i in range(1,20):
+        if st % i == 0:
+            ok = False
+            break
+    if ok:
+        return st
+    else:
+        minPos(st +1)
+
+minPos(2520)
+
+
