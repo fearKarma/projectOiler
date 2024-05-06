@@ -1,4 +1,4 @@
-#what is the 10 001st prime number
+### What is the 10,001st prime number ###
 
 import math
 
@@ -6,24 +6,21 @@ def isPrime(x):
     if x <= 1:
         return False
     for w in range(2, int(math.sqrt(x)) + 1 ):
-        if x % 2 == 0:
+        if x % w == 0:
             return False
     return True
 
 def ten_tho():
-    n = 0
-    p = 0
-    while n <= 60:
-        for g in range(0,50000000):
-            if isPrime(g):
-                n += 1
-                print(g)
-    return g
+    n = []
+    g = 0
+    while len(n) < 10001:
+        if isPrime(g):
+            n.append(g)
+        g+=1
+    return n
 
-        
-
-
-print(ten_tho())
+for x in ten_tho():
+    print(x)
 
 
 
